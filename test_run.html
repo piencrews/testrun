@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- This is the CSS of the website because I suck like that lmao-->
+<style>
+  * {
+  box-sizing: border-box;
+}
+
+/* what the body would look like when I make one */
+body {
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition: background-color .5s;
+}
+
+/* what the colum would look like when I make one */
+.column {
+    float: left;
+    width: 50%
+}
+
+.rows:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.title {
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  color: orangered;
+}
+
+
+.header {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* making the dropdown navigator bar*/
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: darkgreen;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color:#8fd2e2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* when you hover one of the button that button will shade that color lmao */
+li a:hover, .dropdown:hover ,dropbtn {
+  background-color:#e77cae;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #352214;
+  min-width: 160px;
+  box-shadow: 0px 8px 17px 0px white;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color:#8fd2e2;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #352214;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+
+/* Side navigation links */
+  /*color is to change the title of the links to that color*/
+.sidenav a {
+  color: #5bc0c8;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+  font-size: 25px;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  color: orangered;
+  background-color:#e77cae;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+
+/* to add another page just make another html and put <ahref="jesus man and end it <a> */
+</style>
+<head>
+<title>Test Run</title>
+
+</head>
+
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href= "test_run.html" align='center'>Home</a>
+    <a href="#" align= 'center'>About</a>
+    <a href="members of pien.html" align= 'center'>Members</a>
+    <a href="#" align= 'center'>'Cursed Images'</a>
+    <a href='#' align= 'center'>Online Store</a>
+  </div>
+
+
+  <div id="main">
+    <span style="font-size:30px;cursor:pointer"
+    onclick="openNav()">&#9776;</span>
+  </div>
+  
+
+<div class="content">
+  <h2 align= 'center'><font size="10" color="#352214">
+    Test Run
+  </font></h2>
+  <p align='center'>
+    Welcome to the homepage that I don't know what to put because it be like that sometimes lmao.
+   </p>
+</div>
+
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+  }
+</script>
+
+</body>
+</html>
