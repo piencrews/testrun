@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- This is the CSS of the website because I suck like that lmao Open to see!!-->
+<style>
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition: background-color .5s;
+}
+
+
+.column {
+    float: left;
+    width: 50%
+}
+
+.rows:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.title {
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  color: orangered;
+}
+
+
+.header {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* grid-template is heighting of the grid
+padding is thickness of the background
+*/
+
+/*columns is for width */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 463px 463px 463px;
+  grid-template-rows: 480px 480px 480px;
+  grid-gap: 7px;
+  background-color: whitesmoke;
+  padding: 10px
+}
+
+.grid-container> div {
+  background-color: thistle;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 15px;
+}
+
+
+/* making the dropdown navigator bar*/
+/*updating it because want to add the thingy */
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: darkgreen;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: purple;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* when you hover one of the button that button will shade that color lmao */
+li a:hover, .dropdown:hover ,dropbtn {
+  background-color: purple
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: blanchedalmond;
+  min-width: 160px;
+  box-shadow: 0px 8px 17px 0px white;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:moccasin;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+
+/* Side navigation links */
+  /*color is to change the title of the links to that color*/
+
+  /*side nav a is for the creating the navigator side bar. Color is for text */
+
+.sidenav a {
+  padding: 8px 8px 8px 30px;
+  text-decoration: none;
+  font-size: 25px;
+  color: green;
+  display: block;
+  transition: 0.3s;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  color:orangered;
+  background-color: purple;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 250px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+
+/* to add another page just make another html and put <ahref="jesus man and end it <a> */
+
+</style>
+
+
+<!-- #5BC0C8
+#8FD2E2
+#DA1F8B
+#E77CAE
+#352214 
+ color them-->
+
+<head>
+
+<title>Members</title>
+
+</head>
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href= "test_run.html" align='center'>Home</a>
+      <a href="#" align= 'center'>About</a>
+      <a href="members of pien.html" align= 'center'>Members</a>
+      <a href="#" align= 'center'>'Cursed Images'</a>
+      <a href='#' align= 'center'>Online Store</a>
+    </div>
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer"
+  onclick="openNav()">&#9776;</span>
+</div>
+
+
+<div class= "content">
+    <h1 align= 'center'><font size ="10" color='orangered'>
+        Members
+    </font></h1>
+    <p align= 'center'>
+        Description of everyone in the cult lmao
+    </p>  
+</div>
+
+
+<div class="grid-container">
+  <div class='item1'>Leader</div>
+  <div class='item2'>Manager</div>
+  <div class='item3'>everyone else</div>
+  <div class='item4'>renra</div>
+  <div class='item5'>cursed images</div>
+  <div class='item6'>pienchan</div>
+</div>
+
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+  }
+</script>
+
+
+</body>
+</html>
