@@ -1,4 +1,4 @@
-# testrun
+# PLEASE READ ME AND RULES AND OTHER HOUSEKEEPING THINGS
 
 
 Hello! This is Tapas! Welcome to the piencrews website gang! There is a couple of rules that I want to place down before
